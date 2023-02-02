@@ -6,7 +6,7 @@
 /*   By: jmaalouf <jmaalouf@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 16:17:35 by jmaalouf          #+#    #+#             */
-/*   Updated: 2022/12/21 17:56:36 by jmaalouf         ###   ########.fr       */
+/*   Updated: 2022/10/11 09:02:31 by jmaalouf         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ int	mandelbrot(int x, int y, t_data *data)
 	i = 0;
 	zr = 0;
 	zi = 0;
-	data->fract.cr = data->axis.min_re + (double)x * (data->axis.max_re - data->axis.min_re) / data->axis.width;
-	data->fract.ci = data->axis.min_im + (double)y * (data->axis.max_im - data->axis.min_im) / data->axis.height;
+	data->fract.cr = data->axis.min_re + (double)x
+		* (data->axis.max_re - data->axis.min_re) / data->axis.width;
+	data->fract.ci = data->axis.min_im + (double)y
+		* (data->axis.max_im - data->axis.min_im) / data->axis.height;
 	while (i < data->fract.iterations)
 	{
 		if (zr * zr + zi * zi > 4.0)
