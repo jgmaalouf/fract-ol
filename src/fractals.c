@@ -87,7 +87,9 @@ int	burning_ship(int x, int y, t_data *data)
 	}
 	return (i);
 }
-
+/* 
+	Explain it here.
+*/
 int	penis(int x, int y, t_data *data)
 {
 	int		i;
