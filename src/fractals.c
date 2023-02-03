@@ -87,7 +87,9 @@ int	burning_ship(int x, int y, t_data *data)
 	}
 	return (i);
 }
-
+/* 
+	After playing around with the burningship fractal, I discovered a new interesting fractal.
+*/
 int	penis(int x, int y, t_data *data)
 {
 	int		i;
