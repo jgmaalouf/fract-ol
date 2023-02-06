@@ -6,7 +6,7 @@
 #    By: jmaalouf <jmaalouf@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/10 11:56:41 by jmaalouf          #+#    #+#              #
-#    Updated: 2023/02/02 14:23:25 by jmaalouf         ###   ########.fr        #
+#    Updated: 2023/02/06 12:57:44 by jmaalouf         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ UNAME := $(shell uname)
 HEADERS	= -I ./include -I $(LIBMLX)/include -I $(LIBFT)
 
 ifeq ($(UNAME), Darwin)
-LIBS	= $(LIBMLX)/glfw_lib/libglfw3.a $(LIBMLX)/build/libmlx42.a $(LIBFT)/libft.a -framework Cocoa -framework OpenGL -framework IOKit
+LIBS	= $(LIBMLX)/glfw_lib/libglfw3.a $(LIBMLX)/builds/libmlx42.a $(LIBFT)/libft.a -framework Cocoa -framework OpenGL -framework IOKit
 endif
 
 SRCS	= src/main.c src/colors.c src/fractals.c src/hooks.c src/utils.c src/movement.c src/manipulation.c
@@ -53,8 +53,8 @@ libmlx:
 	mv glfw-3.3.8.bin.MACOS/glfw_lib ./lib/MLX42/ && \
 	rm -rf glfw-3.3.8.bin.MACOS && \
 	cd lib/MLX42 && \
-	cmake -B build && \
-	cmake --build build; \
+	cmake -B builds && \
+	cmake --build builds; \
 	fi
 
 %.o: %.c
